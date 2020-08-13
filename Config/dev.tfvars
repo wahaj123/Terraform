@@ -1,0 +1,11 @@
+vpc_cidr             = "13.0.0.0/16"
+public_subnet        = ["13.0.1.0/24", "13.0.2.0/24"]
+private_subnet       = ["13.0.3.0/24", "13.0.4.0/24"]
+ami_id               = "ami-0bdcc6c05dec346bf"
+instance_type        = "t2.micro"
+key_name             = "wahaj(webserver)"
+db_allocated_storage = 20
+db_storage_type      = "gp2"
+db_engine            = "mysql"
+db_engine_version    = "5.7"
+db_instance_class    = "db.t2.micro"
