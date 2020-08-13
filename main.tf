@@ -59,3 +59,9 @@ module "bastion" {
   key_name      = var.key_name
   vpc_id        = "${module.my_vpc.vpc_id}"
 }
+module "route53" {
+  source  = "./modules/route53"
+  alb_dns = "${module.alb.alb_dns}"
+  zone_id = "${module.alb.zone_id}"
+  vpc_id  = "${module.my_vpc.vpc_id}"
+}
